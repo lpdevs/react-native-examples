@@ -34,18 +34,23 @@ export default class Tutorial extends Component {
     console.log("Hello render");
     return (
       <View style={styles.container}>
-        {/*<StatusBar hidden="true" />*/}
-        {/*<Text style={{backgroundColor: 'yellow'}}> BACKGROUND COLOR</Text>*/}
-        <Text style={styles.welcome}>
-          Welcome to React Native Android!!!!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <View style={styles.container1}>
+          {/*<StatusBar hidden="true" />*/}
+          {/*<Text style={{backgroundColor: 'yellow'}}> BACKGROUND COLOR</Text>*/}
+          <Text style={styles.welcome}>
+            Welcome to React Native Android!!!!
+          </Text>
+        </View>
+
+        <View style={styles.container2}>
+          <Text style={styles.instructions}>
+            To get started, edit index.android.js
+          </Text>
+          <Text style={styles.instructions}>
+           Double tap R on your keyboard to reload,{'\n'}
+           Shake or press menu button for dev menu
+          </Text>
+        </View>
       </View>
     );
   }
@@ -59,9 +64,18 @@ export default class Tutorial extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "column",
     backgroundColor: '#F5FCFF',
+  },
+  container1: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#ff00ff',
+  },
+  container2: {
+    flex: 6,
+    alignItems: 'center',
+    backgroundColor: '#00ffff',
   },
   welcome: {
     fontSize: 20,
