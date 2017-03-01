@@ -1,0 +1,3 @@
+rootProject.name = 'RouteNavigator'
+
+include ':app'
